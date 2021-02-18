@@ -1,5 +1,6 @@
 <template>
-  <view class="index">
+  <view class="index" ref="hello"
+        @tap="onClick">
     <NumberDisplay/>
     <NumberSubmit/>
   </view>
@@ -21,6 +22,22 @@ export default {
       imageUrl: 'http://demo.png',
       query: 'name=xxx&age=xxx',
     }
+  },
+  methods: {
+    onClick() {
+      console.log('123123')
+    }
+  },
+  mounted() {
+    const dom = this.$refs.hello
+    console.dir(dom)
+    dom.setAttribute('style', 'background: red')
+
+
+    debugger
+    window.addEventListener('click',() => {
+      console.log('hello')
+    })
   }
 }
 </script>
