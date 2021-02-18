@@ -17,6 +17,7 @@ export default {
   },
   methods: {
     addNumber() {
+      debugger
       this.$store.dispatch('addNumber', Number(this.number))
     }
   }

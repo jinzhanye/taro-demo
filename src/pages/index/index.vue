@@ -14,6 +14,13 @@ export default {
   components: {
     NumberDisplay,
     NumberSubmit
+  },
+  onShareAppMessage() {
+    return {
+      title: '自定义标题',
+      imageUrl: 'http://demo.png',
+      query: 'name=xxx&age=xxx',
+    }
   }
 }
 </script>
